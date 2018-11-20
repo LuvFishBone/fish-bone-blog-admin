@@ -9,7 +9,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = webpackMerge(webpackBase, {
     mode: 'production',
-    devtool: 'source-map',
+    devtool: false,
     output: {
         filename: 'js/[name].[chunkhash].js',
         path: path.resolve(__dirname, '../dist'),
