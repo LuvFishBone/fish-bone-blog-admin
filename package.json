@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config ./build/webpack.dev.config.js --process --color --open",
     "clear": "rm -rf ./dist",
-    "build": "npm run clear && webpack --config ./build/webpack.prod.config.js --progress --profile --color"
+    "build": "npm run clear && webpack --config ./build/webpack.prod.config.js --progress --color"
   },
   "repository": {
     "type": "git",
