@@ -4,7 +4,6 @@ const webpackMerge = require('webpack-merge');
 const webpackBase = require('./webpack.base.config');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports = webpackMerge(webpackBase, {
     mode: 'development',
     devServer: {
@@ -33,6 +32,18 @@ module.exports = webpackMerge(webpackBase, {
         })
 
     ],
+    module: {
+        rules: [
+            {
+                test: /\.less$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    'less-loader'
+                ]
+            },
+        ]
+    },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, '../dist'),
