@@ -1,14 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/pages/Login'
-import Dashboard from '@/pages/Dashboard'
-import ArticleList from '@/pages/ArticleList'
-import PublishAnalyze from '@/pages/PublishAnalyze'
-import PublishArticle from '@/pages/PublishArticle'
-import Tags from '@/pages/Tags'
-import Types from '@/pages/Types'
-import ManageComments from '@/pages/ManageComments'
-import About from '@/pages/About'
 
 Vue.use(Router)
 
@@ -18,47 +9,42 @@ const router = new Router({
         {
             path: '/login',
             name: 'login',
-            component: Login
+            component: resolve => require(['@/pages/Login'], resolve)
         },
-        // {
-        //     path: '/dashboard',
-        //     name: 'dashboard',
-        //     component: Dashboard
-        // },
         {
             path: '/articlelist',
             name: 'articlelist',
-            component: ArticleList
+            component: resolve => require(['@/pages/ArticleList'], resolve)
         },
         {
             path: '/publishAnalyze',
             name: 'publishAnalyze',
-            component: PublishAnalyze
+            component: resolve => require(['@/pages/PublishAnalyze'], resolve)
         },
         {
             path: '/publishArticle',
             name: 'publishArticle',
-            component: PublishArticle
+            component: resolve => require(['@/pages/PublishArticle'], resolve)
         },
         {
             path: '/tags',
             name: 'tags',
-            component: Tags
+            component: resolve => require(['@/pages/Tags'], resolve)
         },
         {
             path: '/types',
             name: 'types',
-            component: Types
+            component: resolve => require(['@/pages/Types'], resolve)
         },
         {
             path: '/manageComments',
             name: 'manageComments',
-            component: ManageComments
+            component: resolve => require(['@/pages/ManageComments'], resolve)
         },
         {
             path: '/about',
             name: 'about',
-            component: About
+            component: resolve => require(['@/pages/About'], resolve)
         },
         {
             path: '*',
