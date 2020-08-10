@@ -35,7 +35,6 @@
                 this.getIsCollapsed() ? 'rotate-icon' : ''
               ];
           },
-
       },
       methods: {
         ...mapGetters([
