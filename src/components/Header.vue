@@ -16,7 +16,6 @@
     </div>
   </Header>
 </template>
-
 <script>
     import { mapMutations, mapGetters } from 'vuex'
     import { MENU_DISPLAY_TOGGLE } from '@/store/mutation-types'
